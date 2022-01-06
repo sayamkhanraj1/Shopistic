@@ -1,0 +1,119 @@
+.checkout-area {
+    padding-top: 95px;
+    padding-bottom: 100px;
+}
+
+.billing-info {
+    margin-bottom: 20px;
+}
+
+.billing-info label {
+    margin: 0 0 7px;
+}
+
+.billing-info input {
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    background: transparent none repeat scroll 0 0;
+    width: 100%;
+    height: 45px;
+    box-shadow: none;
+    transition: all .3s ease 0s;
+}
+
+.billing-select {
+    margin-bottom: 20px;
+}
+
+.billing-select label {
+    margin: 0 0 7px;
+}
+
+.billing-select select {
+    font-size: 14px;
+    height: 45px;
+    padding: 2px 20px;
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+}
+
+.billing-select option {
+    font-size: 14px;
+    padding-left: 10px;
+    border: 0 solid #626262;
+    background: #fff;
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+.billing-address {
+    margin-bottom: 10px;
+}
+
+.your-order-wrap {
+    padding: 38px 45px 44px;
+    background: #f6f6f6;
+}
+
+.your-order-product-info ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: outside none none;
+}
+
+.your-order-product-info ul li {
+    font-size: 16px;
+    font-weight: 500;
+    list-style: outside none none;
+}
+
+.your-order-middle {
+    margin: 29px 0;
+    padding: 19px 0 18px;
+    border-top: 1px solid #dee0e4;
+}
+
+.your-order-middle2 {
+    margin: 18px 0 33px;
+    padding: 17px 0 19px;
+    border-top: 1px solid #dee0e4;
+
+}
+
+.your-order-bottom {
+    margin: 18px 0 0px;
+    padding: 17px 0 0px;
+    border-top: 1px solid #dee0e4;
+
+}
+.checkout{
+    margin-top: 25px;
+}
+.checkout button{
+    font-weight: 500;
+    line-height: 1;
+    z-index: 9;
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    background: none;
+    background-color: #a749ff;
+}
