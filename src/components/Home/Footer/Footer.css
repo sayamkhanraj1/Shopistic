@@ -1,0 +1,14 @@
+.footer-menu {
+         list-style: none;
+         margin-top: 20px;
+         font-size: 16px;
+         cursor: pointer;
+}
+.footer-container {
+         background-color: rgba(134, 37, 84, 0.9);
+         padding: 50px;
+         color: white;
+ }     
+.footer-container h4{
+         color: white;
+ }     
