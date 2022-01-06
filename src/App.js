@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import ContactUs from './components/ContactUs/ContactUs';
+import CheckOut from './components/Checkout/Checkout';
 
 
 
@@ -13,8 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<LoginRegister />} />
+        <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/checkout" element={<CheckOut />} />
         
       </Routes>
     </div>
