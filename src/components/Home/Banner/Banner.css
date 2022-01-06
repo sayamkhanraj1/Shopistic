@@ -1,0 +1,23 @@
+.banner{
+         background-color: #e2daf8;
+}
+.banner-btn{
+         padding: 19px 50px 21px;
+         font-size: 16px;
+         border: 1px solid #333;
+         display: inline-block;
+         line-height: 1;
+}
+.banner-heading{
+         font-size: 72px;
+         line-height: 97px;
+         margin: 6px 0 37px;
+         color: #010101;
+         font-family: 'Quicksand', sans-serif;
+}
+.banner-heading1{
+         font-size: 24px;
+         font-weight: 500;
+         margin: 0;
+         color: #010101;
+}
