@@ -1,0 +1,24 @@
+.blog-titel{
+         font-family: 'Quicksand', sans-serif;
+         font-size: 30px;
+         font-weight: 900;
+         color: #000;
+}
+.blog-titel h2::after{
+         position: absolute;
+         top: 17px;
+         left: -100px;
+         width: 80px;
+         height: 2px;
+         content: "";
+         background-color: #000;
+}
+.blog-titel h2::before{
+         position: absolute;
+         top: 17px;
+         left: -100px;
+         width: 80px;
+         height: 2px;
+         content: "";
+         background-color: #000;
+}
