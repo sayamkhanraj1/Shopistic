@@ -15,7 +15,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
                         <Nav className="m-auto">
-                            <NavLink className="text-decoration-none fs-5 ms-4 text-secondary header-texts" to="/home">Home</NavLink>
+                            <NavLink className="text-decoration-none fs-5 ms-4 text-secondary header-texts" to="/">Home</NavLink>
                             <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/moreProducts header-texts">Collection</NavLink>
                             <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/blogs">Blogs</NavLink>
                             <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/moreProducts">Contact Us</NavLink>
