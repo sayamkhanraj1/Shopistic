@@ -13,17 +13,16 @@ const SingleProduct = () => {
                 setShipping(data)
             })
     }, [])
-    const {image, title, price} = data
+    const {image, title, price} = shipping
     return (
         <Row xs={1} md={2} className="g-4">
                 <Col>
                     <Card>
                         <Card.Img variant="top" src={image} />
                         <Card.Body>
-                            <Card.Title>Card title</Card.Title>
+                            <Card.Title>{title}</Card.Title>
                             <Card.Text>
-                                This is a longer card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.
+                                {price}
                             </Card.Text>
                         </Card.Body>
                     </Card>
