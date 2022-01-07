@@ -5,10 +5,35 @@
          cursor: pointer;
 }
 .footer-container {
-         background-color: rgba(134, 37, 84, 0.9);
+         background-color: #f6f6f8;
          padding: 50px;
-         color: white;
+         color: #5d5d5d;
  }     
 .footer-container h4{
-         color: white;
- }     
+         color: #5d5d5d;
+ }  
+ 
+ .footer-box{
+         padding: 2px 10px 2px 0;
+         padding: 2px 10px 2px 0;
+         color: #333;
+         border: none;
+         border-bottom: 2px solid #ebebeb;
+         background: transparent;
+         margin-bottom: 8px;
+ }
+
+ .fotter-btn{
+         font-size: 14px;
+         line-height: 1;
+         width: auto;
+         height: auto;
+         margin: 13px 0 0;
+         padding: 0 0 1px;
+         text-transform: uppercase;
+         color: #313131;
+         border: none;
+         border-bottom: 2px solid #9b9b9c;
+         background: none;
+         margin-top: 5px;
+ }
