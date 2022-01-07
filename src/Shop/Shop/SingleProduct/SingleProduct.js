@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/* import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
@@ -32,4 +32,4 @@ const SingleProduct = () => {
     );
 };
 
-export default SingleProduct;
+export default SingleProduct; */
