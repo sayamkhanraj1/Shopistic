@@ -3,6 +3,11 @@ import { Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
 import Blogs from './components/Home/Blogs/Blogs';
+import Header from './components/Home/Header/Header';
+import Footer from './components/Home/Footer/Footer';
+import Blog1 from './components/Home/Blog/Blog1/Blog1';
+import Blog2 from './components/Home/Blog/Blog2/Blog2';
+import Blog3 from './components/Home/Blog/Blog3/Blog3';
 
 
 
@@ -10,11 +15,15 @@ import Blogs from './components/Home/Blogs/Blogs';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
-        
+        <Route path="blog1" element={<Blog1 />} />
+        <Route path="blog2" element={<Blog2 />} />
+        <Route path="blog3" element={<Blog3 />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
