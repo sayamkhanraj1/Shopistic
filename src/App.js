@@ -13,6 +13,7 @@ import ContactUs from './components/ContactUs/ContactUs';
 import CheckOut from './components/Checkout/Checkout';
 import Products from './Shop/Shop/Products';
 import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
+import Error from './components/Error/Error';
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/moreproduct" element={<Products />} />
         <Route path="/moreproduct/:id" element={<SingleProduct/>} />
+        <Route path="*" element={<Error/>} />
+
       </Routes>
       <Footer />
     </div>

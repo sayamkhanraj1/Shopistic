@@ -1,4 +1,3 @@
-import React from 'react';
 import './Register.css';
 
 const Register = () => {
@@ -6,8 +5,8 @@ const Register = () => {
         <div className='register-form'>
             <form>
                 <input type="text" name="user-name" placeholder="Username" />
-                <input type="password" name="user-password" placeholder="Password" />
                 <input type="email" name="user-email" placeholder="Email" />
+                <input type="password" name="user-password" placeholder="Password" />
                 <div className="button-box">
                     <button type='submit'><span>Register</span></button>
                 </div>
