@@ -11,8 +11,9 @@ import Blog3 from './components/Home/Blog/Blog3/Blog3';
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import ContactUs from './components/ContactUs/ContactUs';
 import CheckOut from './components/Checkout/Checkout';
-
-
+import Products from './Shop/Shop/Products';
+import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
+import Error from './components/Error/Error';
 
 
 function App() {
@@ -26,9 +27,13 @@ function App() {
         <Route path="blog1" element={<Blog1 />} />
         <Route path="blog2" element={<Blog2 />} />
         <Route path="blog3" element={<Blog3 />} />  
-        <Route path="/loginregister" element={<LoginRegister />} />
+        <Route path="/login" element={<LoginRegister />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/moreproduct" element={<Products />} />
+        <Route path="/moreproduct/:id" element={<SingleProduct/>} />
+        <Route path="*" element={<Error/>} />
+
       </Routes>
       <Footer />
     </div>

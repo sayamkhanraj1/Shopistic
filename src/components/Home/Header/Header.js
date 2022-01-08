@@ -7,7 +7,7 @@ import './Header.css'
 const Header = () => {
     return (
         <div className="header p-2">
-            <Navbar variant="light" expand="lg" sticky="top">
+            <Navbar variant="light" expand="sm" sticky="top">
                 <Container>
                     <Navbar.Brand className="fw-bold fs-3">
                     <span className="text-danger">Shop</span><span className="text-secondary">istic.</span>
@@ -16,9 +16,9 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
                         <Nav className="m-auto">
                             <NavLink className="text-decoration-none fs-5 ms-4 text-secondary header-texts" to="/">Home</NavLink>
-                            <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/moreProducts header-texts">Collection</NavLink>
+                            <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/moreproduct">Collection</NavLink>
                             <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/blogs">Blogs</NavLink>
-                            <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/moreProducts">Contact Us</NavLink>
+                            <NavLink className="text-decoration-none header-text fs-5 ms-4 text-secondary header-texts" to="/contactus">Contact Us</NavLink>
                             
                             {
                                <NavLink className="text-decoration-none header-text ms-3 text-secondary fs-5 header-texts" to="/dashbord">Dashbord</NavLink>
