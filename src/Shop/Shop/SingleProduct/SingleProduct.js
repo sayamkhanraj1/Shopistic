@@ -18,7 +18,8 @@ const SingleProduct = () => {
             })
     }, [])
     const onSubmit = data => {
-       
+       reset()
+       alert('Order added')
     }
     const {image, title, price} = shipping
     return (
