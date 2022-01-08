@@ -11,7 +11,7 @@ const Products = () => {
     },[])
     return (
         <Container>
-            <Row xs={1} md={2} className="g-4">
+            <Row xs={1} md={4} className="g-4">
                 {
                     product.map(p => <Product key={p.id}
                     p={p}
