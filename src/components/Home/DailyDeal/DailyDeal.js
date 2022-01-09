@@ -1,16 +1,11 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
-import './Products.css'
+import './DailyDeal.css'
 
 const Product = (props) => {
 
-        const { img, price, name, id, rating, des } = props.p
-
-       /*  // icons
-        const cartIcon = <FontAwesomeIcon icon={faCartArrowDown} />
-        const starIcon = <FontAwesomeIcon icon={faStar} /> */
-  
+        const { img, price, name, id, rating } = props.p
 
 
         return (
@@ -31,7 +26,6 @@ const Product = (props) => {
                                     fullSymbol = "fas fa-star icon-color"
                                     ></Rating></div>
                     </div>
-                    <div> <p className="text-center mx-2">{des}</p> </div>
                     <div className="d-flex justify-content-center align-items-center">
                      <Link to={`/moreproduct/${id}`}>
                      <button className="service-btn mb-3 btn"> Buy Now</button>

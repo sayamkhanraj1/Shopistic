@@ -26,7 +26,7 @@
 }
 .card-style{
          box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-         background-color: #fff;
+         background-color: rgb(247, 243, 243);
          color: black;
          border-radius: 12px;
 }
@@ -57,3 +57,7 @@
          font-family: "Quicksand",sans-serif;
          font-weight: 700;
      }
+
+.icon-color {
+        color: gold;
+}

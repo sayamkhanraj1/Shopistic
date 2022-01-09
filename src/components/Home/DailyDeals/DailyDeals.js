@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Product from './Product/Product';
+import DailyDeal from '../DailyDeal/DailyDeal'
 
-const Products = () => {
+const DailyDeals = () => {
     const [product, setProduct] = useState([])
     useEffect(()=>{
         fetch('https://murmuring-anchorage-32548.herokuapp.com/products')
@@ -11,15 +11,17 @@ const Products = () => {
     },[])
     return (
         <Container>
+                 <h2 className="blog-titel text-center my-5">DAILY DEALS!</h2>
             <Row xs={1} md={4} className="g-4">
                 {
-                    product.map(p => <Product key={p.id}
-                    p={p}
-                    ></Product>)
+                     product.slice(0, 6).map(p => <DailyDeal
+                           key={p.id}
+                           p={p}
+                     ></DailyDeal>)
                 }
             </Row>
         </Container>
     );
 };
 
-export default Products;
+export default DailyDeals;
