@@ -32,7 +32,7 @@ const Login = () => {
         <div className='login-form'>
             {
                 !isLoading && <form onSubmit={handleLoginSubmit}>
-                    <input onBlur={handleOnBlur} type="text" name="name" placeholder="Username" required/>
+                    <input onBlur={handleOnBlur} type="email" name="email" placeholder="Email" required/>
                     <input onBlur={handleOnBlur} type="password" name="password" placeholder="Password" required />
                     {success && <p style={{ marginTop: '6px' }}>{success}</p>}
                     {passError && <p style={{ marginTop: '6px' }}>{success}</p>}
