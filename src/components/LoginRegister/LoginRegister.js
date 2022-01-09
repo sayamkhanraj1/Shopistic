@@ -21,7 +21,7 @@ const LoginRegister = () => {
     }
     return (
         <Container>
-            <Row>
+            <Row className="my-5 p-3">
                 <Col md={12} lg={7} className="mx-auto">
                     <div className="login-register-wrapper">
                         <div className="login-register-tab">

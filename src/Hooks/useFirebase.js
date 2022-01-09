@@ -1,63 +1,149 @@
-import { getAuth, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
-import { useEffect, useState } from "react";
-import initializeAuthentication from "../LogIn/firebase/firebase.init";
+import { useEffect, useState } from 'react';
+import initializeAuthentication from '../firebase/firebase.init';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
 
-initializeAuthentication()
+initializeAuthentication();
 
 const useFirebase = () => {
-         const [name, setName] = useState('');
-         const [user, setUser] = useState ({});
-         const [isLoading, setIsloading] = useState(true);
-         const [email, setEmail] = useState('');
-         const [error, setError] = useState('');
 
-         const auth = getAuth();
+    //user hook for email/google signin
+    const [user, setUser] = useState({});
+    //hook for refresh handling
+    const [isLoading, setIsLoading] = useState(true);
 
-         const createNewUser = (email, password) =>{
-                  createUserWithEmailAndPassword(auth, email, password)
-                  .then(result =>{
+    //success set
+    const [success, setSuccess] = useState('');
 
-                          setError('');
-                          const newUser = {email, displayName: name};
-                          setUser(newUser);
-                          // save user to the database
-                          setUserName();
-                  })
-                  .catch((error) =>{
-                          console.log(error.message);
-                  });   
-          }
+    //error set
+    const [authError, setAuthError] = useState('');
+    const [passError, setPassError] = useState('');
 
-          const setUserName = () =>{
-                  updateProfile(auth.currentUser, {displayName: name})
-                  .then(result => {})
-          }
+    //assigning admin status
+    const [admin, setAdmin] = useState(false);
 
-         useEffect(()=>{
-                  const unsubscribed =  onAuthStateChanged(auth, user =>{
-                             if(user){
-                                      setUser(user);
-                             }
-                             else{
-                                      setUser({});
-                             };
-                             setIsloading(false);
-                    });
-                    return () => unsubscribed;
-           }, [auth]);
+    //auth for everyone
+    const auth = getAuth();
 
-           const logOut = () =>{
-                  setIsloading(true)
-                    signOut(auth)
-                    .then(() =>{ })
-                    .finally(() => setIsloading(false));
-           }
-         return {
-                  createNewUser,
-                  user,
-                  isLoading,
-                  logOut
-         }
+
+    //registration functionality 
+    const registerUser = (email, password, name, navigate, setMatch) => {
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const newUser = { email: email, displayName: name };
+                setUser(newUser);
+
+                //saving user to database after registration
+
+                // saveUser(email, name, 'POST')
+
+                //user name send to firebase
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                }).then(() => {
+                    // Profile updated!
+                    // ...
+                }).catch((error) => {
+                    // An error occurred
+                    // ...
+                });
+
+                const destination = '/home'
+               navigate(destination);
+                setSuccess('User Regestration Succesfull!')
+                setAuthError('');
+                setPassError('');
+            })
+            .catch(() => {
+                setAuthError('Email Already In Use!');
+                setPassError('');
+                setSuccess('');
+                setMatch('');
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    //login functionality
+    const loginUser = (email, password, navigate) => {
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                navigate('/');
+                setSuccess('User Login Succesfull!');
+                setPassError('');
+                setAuthError('');
+            })
+            .catch((error) => {
+                setPassError("Your Email or Password Could Be Incorrect or Empty!");
+                setAuthError('');
+                setSuccess('');
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    //observing user state change
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({});
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
+    }, [auth])
+
+
+    //handling signout
+    const logOut = () => {
+        setIsLoading(true)
+        signOut(auth)
+            .then(() => {
+                setSuccess('');
+            })
+            .catch((error) => {
+                // An error happened.
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    //if user registers once he will be saved in database
+
+    // const saveUser = (email, displayName, method) => {
+    //     const user = { email, displayName };
+    //     fetch('https://cryptic-mesa-50717.herokuapp.com/users', {
+    //         method: method,
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    // }
+
+    // //assigning admin functionality
+
+    // useEffect(() => {
+    //     fetch(`https://cryptic-mesa-50717.herokuapp.com/users/${user.email}`)
+    //         .then(res => res.json())
+    //         .then(data => setAdmin(data.admin))
+    // }, [user.email])
+
+    return {
+        user,
+        isLoading,
+        registerUser,
+        loginUser,
+        logOut,
+        admin,
+        success,
+        setAuthError,
+        authError,
+        passError
+
+
+    }
 };
 
 export default useFirebase;
