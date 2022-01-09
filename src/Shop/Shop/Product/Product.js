@@ -14,8 +14,8 @@ const Product = (props) => {
                     <Card.Text>
                         {price}
                     </Card.Text>
-                    <NavLink to={`/moreproducts/${id}`}>
-                    <button className="btn-primary">Bay Now</button>
+                    <NavLink to={`/moreproduct/${id}`}>
+                    <button className="btn-primary">Buy Now</button>
                     </NavLink>
                     
                 </Card.Body>
