@@ -11,7 +11,7 @@ import Blog3 from './components/Home/Blog/Blog3/Blog3';
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import ContactUs from './components/ContactUs/ContactUs';
 import CheckOut from './components/Checkout/Checkout';
-import Products from './Shop/Shop/Products';
+import Products from './Shop/Shop/Products'
 import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
 import Error from './components/Error/Error';
 
