@@ -5,7 +5,32 @@ const CheckOut = () => {
     return (
         <div className="checkout-area">
             <div className="container">
+              
                 <div className="row">
+                    <div className="col-lg-12">
+                        <div className="cart-products-wrap">
+                            <div className="cart-products">
+                                <div className="product">
+                                    <img src="" alt="" />
+                                    <div className="product-details">
+                                        <p>Product</p>
+                                        <p>Id</p>
+                                        <div className='color' color='black'></div>
+                                        <p>Size</p>
+                                    </div>
+                                </div>
+                                <div className="product-counter">
+                                    <div className="counter">
+                                        <button className='plus-btn'>+</button>
+                                        <div style={{fontSize: '30px'}}>0</div>
+                                        <button className='minus-btn'>-</button>
+                                    </div>
+                                    <div style={{ fontSize: '30px' }}>Price: $30</div>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
                     <div className="col-lg-7">
                         <div className="billing-info-wrap">
                             <h3>Billing Details</h3>
