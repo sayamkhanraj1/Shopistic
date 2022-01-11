@@ -35,6 +35,7 @@ const Blogs = () => {
                            <Footer />
                   </div>
          );
+
 };
 
 export default Blogs;
