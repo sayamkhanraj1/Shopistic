@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
 import Blogs from './components/Home/Blogs/Blogs';
 import Header from './components/Home/Header/Header';
-import Footer from './components/Home/Footer/Footer';
 import Blog1 from './components/Home/Blog/Blog1/Blog1';
 import Blog2 from './components/Home/Blog/Blog2/Blog2';
 import Blog3 from './components/Home/Blog/Blog3/Blog3';
@@ -14,7 +13,15 @@ import CheckOut from './components/Checkout/Checkout';
 import Products from './Shop/Shop/Products'
 import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
 import Error from './components/Error/Error';
+import DashBord from './components/DashBord/DashBord/DashBord';
+import AddProduct from './components/DashBord/AddProduct/AddProduct';
+import MakeAdmin from './components/DashBord/MakeAdmin/MakeAdmin';
+import MyOrder from './components/DashBord/MyOrder/MyOrder';
+import AllOrders from './components/DashBord/AllOrders/AllOrders';
 
+import Payment from './components/DashBord/Payment/Payment';
+import Review from './components/DashBord/Review/Review';
+import ManegeAllProducts from './components/DashBord/ManegeAllOrders/ManegeAllProducts';
 
 function App() {
   return (
@@ -32,10 +39,25 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/moreproduct" element={<Products />} />
         <Route path="/moreproduct/:id" element={<SingleProduct/>} />
-        <Route path="*" element={<Error/>} />
+        <Route path="/dashbord" element={<DashBord/>}> 
 
+        <Route exact path={'/dashbord'} element={<MyOrder />} />
+              
+              <Route path={`/dashbord/makeAdmin`} element={<MakeAdmin></MakeAdmin>} />
+                     
+              <Route path={`/dashbord/allorders`} element={<AllOrders />} />
+                     
+              <Route path={`/dashbord/addproduct`} element={ <AddProduct />} /> 
+   
+              <Route path={`/dashbord/manageAllOrders`} element={ <ManegeAllProducts /> } />
+                     
+              <Route path={`/dashbord/review`} element={ <Review /> } />
+   
+              <Route path={`/dashbord/pay`} element={<Payment />} />
+        </Route>
+        <Route path="*" element={<Error/>} />
       </Routes>
-      <Footer />
+      
     </div>
   );
 }

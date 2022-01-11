@@ -15,7 +15,7 @@ const DailyDeals = () => {
             <Row xs={1} md={4} className="g-4">
                 {
                      product.slice(0, 6).map(p => <DailyDeal
-                           key={p.id}
+                           key={p._id}
                            p={p}
                      ></DailyDeal>)
                 }

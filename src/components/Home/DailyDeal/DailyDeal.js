@@ -5,7 +5,7 @@ import './DailyDeal.css'
 
 const Product = (props) => {
 
-        const { img, price, name, id, rating } = props.p
+        const { img, price, name, _id, rating } = props.p
 
 
         return (
@@ -27,7 +27,7 @@ const Product = (props) => {
                                     ></Rating></div>
                     </div>
                     <div className="d-flex justify-content-center align-items-center">
-                     <Link to={`/moreproduct/${id}`}>
+                     <Link to={`/moreproduct/${_id}`}>
                      <button className="service-btn mb-3 btn"> Buy Now</button>
                      </Link>
                     </div>

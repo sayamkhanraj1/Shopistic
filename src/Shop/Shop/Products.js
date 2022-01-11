@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Footer from '../../components/Home/Footer/Footer';
 import Product from './Product/Product';
 
 const Products = () => {
@@ -13,11 +14,12 @@ const Products = () => {
         <Container>
             <Row xs={1} md={4} className="g-4">
                 {
-                    product.map(p => <Product key={p.id}
+                    product.map(p => <Product key={p._id}
                     p={p}
                     ></Product>)
                 }
             </Row>
+            <Footer />
         </Container>
     );
 };
