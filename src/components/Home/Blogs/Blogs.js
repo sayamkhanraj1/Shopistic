@@ -32,7 +32,6 @@ const Blogs = () => {
                                     </div>
                            </div>
                            </div>
-                           <Footer />
                   </div>
          );
 
