@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 
 
-const ManegeAllOrders = () => {
+const ManegeAllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [products, setProducts] = useState([]);
 
@@ -68,4 +68,4 @@ const ManegeAllOrders = () => {
     );
 };
 
-export default ManegeAllOrders;
+export default ManegeAllProducts;

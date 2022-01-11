@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import Footer from '../Home/Footer/Footer';
 import './ContactUs.css';
 const ContactUs = () => {
     return (
@@ -71,6 +72,7 @@ const ContactUs = () => {
                     </div>
                 </Col>
             </Row>
+            <Footer />
         </Container>
     );
 };

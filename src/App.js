@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
 import Blogs from './components/Home/Blogs/Blogs';
 import Header from './components/Home/Header/Header';
-import Footer from './components/Home/Footer/Footer';
 import Blog1 from './components/Home/Blog/Blog1/Blog1';
 import Blog2 from './components/Home/Blog/Blog2/Blog2';
 import Blog3 from './components/Home/Blog/Blog3/Blog3';
@@ -19,9 +18,10 @@ import AddProduct from './components/DashBord/AddProduct/AddProduct';
 import MakeAdmin from './components/DashBord/MakeAdmin/MakeAdmin';
 import MyOrder from './components/DashBord/MyOrder/MyOrder';
 import AllOrders from './components/DashBord/AllOrders/AllOrders';
-import ManegeAllOrders from './components/DashBord/ManegeAllOrders/ManegeAllOrders';
+
 import Payment from './components/DashBord/Payment/Payment';
 import Review from './components/DashBord/Review/Review';
+import ManegeAllProducts from './components/DashBord/ManegeAllOrders/ManegeAllProducts';
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
                      
               <Route path={`/dashbord/addproduct`} element={ <AddProduct />} /> 
    
-              <Route path={`/dashbord/manageAllOrders`} element={ <ManegeAllOrders /> } />
+              <Route path={`/dashbord/manageAllOrders`} element={ <ManegeAllProducts /> } />
                      
               <Route path={`/dashbord/review`} element={ <Review /> } />
    

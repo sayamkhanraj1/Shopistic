@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Footer from '../../components/Home/Footer/Footer';
 import Product from './Product/Product';
 
 const Products = () => {
@@ -18,6 +19,7 @@ const Products = () => {
                     ></Product>)
                 }
             </Row>
+            <Footer />
         </Container>
     );
 };

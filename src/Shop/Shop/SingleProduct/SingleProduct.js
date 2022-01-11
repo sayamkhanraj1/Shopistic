@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import './SingleProducts.css'
 import useAuth from '../../../Hooks/useAuth';
 import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
 
 const Orders = () => {
 
@@ -27,7 +26,22 @@ const Orders = () => {
          },[orders, id])
 
          // react hook form
-         const { register, handleSubmit, watch, formState: { errors } } = useForm();
+         const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+
+         const onSubmit = (data) => {
+          data.status= "Pending";
+          fetch('https://murmuring-anchorage-32548.herokuapp.com/ordersInfo', {
+            method: "POST",
+            headers: { "content-type": "application/json"},
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then((result) =>{
+                alert("Ordered Successfully!");
+                reset();
+          });
+          console.log(data);
+      };
 
          console.log(watch("example")); 
 
@@ -56,7 +70,7 @@ const Orders = () => {
                  </div>
 
                   <div className="col-md-6 mt-4 mb-3">
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                                 {
                                    singleOrder?.name &&  <input
                                    {...register("title")}

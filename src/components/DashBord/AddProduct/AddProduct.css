@@ -1,10 +1,10 @@
 .add-form{
-         margin: 30px 80px;
+         margin: 80px;
          display: flex;
          justify-content: center;
          align-items: center;
          flex-direction: column;
-         background-color: #fc479e;
+         background-color: #2e2429;
          border-radius: 5px;
          padding: 10px 20px;
 }
