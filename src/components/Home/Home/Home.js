@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
 import DailyDeals from '../DailyDeals/DailyDeals';
+import Footer from '../Footer/Footer';
 import Support from '../Support/Support';
 
 
@@ -11,7 +12,8 @@ const Home = () => {
                       <Banner />
                       <Support />
                       <DailyDeals />
-                      <Blogs />                
+                      <Blogs />   
+                      <Footer />             
                   </div>
          );
 };

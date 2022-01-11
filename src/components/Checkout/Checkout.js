@@ -7,7 +7,7 @@ const CheckOut = () => {
             <div className="container">
               
                 <div className="row">
-                    <div className="col-lg-12">
+                   {/*  <div className="col-lg-12">
                         <div className="cart-products-wrap">
                             <div className="cart-products">
                                 <div className="product">
@@ -30,8 +30,8 @@ const CheckOut = () => {
                             </div>
                             <hr />
                         </div>
-                    </div>
-                    <div className="col-lg-7">
+                    </div> */}
+                    {/* <div className="col-lg-7">
                         <div className="billing-info-wrap">
                             <h3>Billing Details</h3>
                             <div className="row">
@@ -144,7 +144,7 @@ const CheckOut = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             {/* <Container >

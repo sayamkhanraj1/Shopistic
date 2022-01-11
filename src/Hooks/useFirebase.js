@@ -35,7 +35,7 @@ const useFirebase = () => {
 
                 //saving user to database after registration
 
-                // saveUser(email, name, 'POST')
+                  saveUser(email, name, 'POST')
 
                 //user name send to firebase
                 updateProfile(auth.currentUser, {
@@ -111,24 +111,25 @@ const useFirebase = () => {
 
     //if user registers once he will be saved in database
 
-    // const saveUser = (email, displayName, method) => {
-    //     const user = { email, displayName };
-    //     fetch('https://murmuring-anchorage-32548.herokuapp.com/users', {
-    //         method: method,
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(user)
-    //     })
-    // }
+        const saveUser = (email, displayName, method) => {
+        const user = { email, displayName };
+         fetch('https://murmuring-anchorage-32548.herokuapp.com/users', {
+             method: method,
+             headers: {
+                 'content-type': 'application/json'
+             },
+             body: JSON.stringify(user)
+         })
+     }
 
     // //assigning admin functionality
 
-    // useEffect(() => {
-    //     fetch(`https://murmuring-anchorage-32548.herokuapp.com/users/${user.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setAdmin(data.admin))
-    // }, [user.email])
+      useEffect(() => {
+        fetch(`https://murmuring-anchorage-32548.herokuapp.com/users/${user.email}`)
+             .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+     }, [user.email])
+    
 
     return {
         user,

@@ -5,7 +5,7 @@ import './Products.css'
 
 const Product = (props) => {
 
-        const { img, price, name, id, rating, des } = props.p
+        const { img, price, name, _id, rating, des } = props.p
 
        /*  // icons
         const cartIcon = <FontAwesomeIcon icon={faCartArrowDown} />
@@ -33,7 +33,7 @@ const Product = (props) => {
                     </div>
                     <div> <p className="text-center mx-2">{des}</p> </div>
                     <div className="d-flex justify-content-center align-items-center">
-                     <Link to={`/moreproduct/${id}`}>
+                     <Link to={`/moreproduct/${_id}`}>
                      <button className="service-btn mb-3 btn"> Buy Now</button>
                      </Link>
                     </div>
