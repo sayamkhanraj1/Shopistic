@@ -37,11 +37,6 @@ const Login = () => {
                     {success && <p style={{ marginTop: '6px' }}>{success}</p>}
                     {passError && <p style={{ marginTop: '6px' }}>{success}</p>}
                     <div className="button-box">
-                        {/* <div className="login-toggle-btn">
-                        <input type="checkbox" />
-                        <label>Remember me</label>
-                        <a href="/">Forgot Password?</a>
-                    </div> */}
                         <button type='submit'><span>Login</span></button>
                     </div>
                 </form>
