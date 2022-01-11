@@ -9,7 +9,7 @@ import Blog2 from './components/Home/Blog/Blog2/Blog2';
 import Blog3 from './components/Home/Blog/Blog3/Blog3';
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import ContactUs from './components/ContactUs/ContactUs';
-import CheckOut from './components/Checkout/Checkout';
+import CheckOut from './components/DashBord/Payment/Checkout/Checkout';
 import Products from './Shop/Shop/Products'
 import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
 import Error from './components/Error/Error';
@@ -53,7 +53,7 @@ function App() {
                      
               <Route path={`/dashbord/review`} element={ <Review /> } />
    
-              <Route path={`/dashbord/pay`} element={<Payment />} />
+          <Route path={`/dashbord/pay:orderId`} element={<Payment />} />
         </Route>
         <Route path="*" element={<Error/>} />
       </Routes>

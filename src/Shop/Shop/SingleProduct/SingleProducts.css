@@ -1,21 +1,49 @@
-.order-form{
-         margin: 30px 80px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         background-color: #fc479e;
-         border-radius: 5px;
-         padding: 10px 20px;
+.order-form {
+    margin: 30px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fc479e;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
-.order-form input{
-         display: block;
-         margin-top: 30px;
-         padding: 15px;
-         border: none;
-         border-radius: 5px;
-         width: 80%;
-         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-         margin-bottom: 10px;
-         font-family: "Quicksand",sans-serif;
+
+.order-form input {
+    display: block;
+    margin-top: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.product-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plus-btn {
+    margin-left: 0.5rem;
+    font-size: 34px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.minus-btn {
+    margin-right: 0.5rem;
+    font-size: 34px;
+    border: none;
+    padding: 5px 15px;
 }
