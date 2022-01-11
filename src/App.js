@@ -53,7 +53,7 @@ function App() {
                      
               <Route path={`/dashbord/review`} element={ <Review /> } />
    
-              <Route path={`/dashbord/pay`} element={<Payment />} />
+          <Route path={`/dashbord/pay:orderId`} element={<Payment />} />
         </Route>
         <Route path="*" element={<Error/>} />
       </Routes>
