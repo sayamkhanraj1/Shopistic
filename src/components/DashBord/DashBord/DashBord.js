@@ -76,7 +76,7 @@ function DashBord(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className="header-text fw-bold" noWrap component="div">
+          <Typography variant="h6" className="text-dark fw-bold" noWrap component="div">
             Welcome to Dashbord
           </Typography>
         </Toolbar>

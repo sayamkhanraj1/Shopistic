@@ -1,10 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from '../Home/Footer/Footer';
+import Header from '../Home/Header/Header';
 import './ContactUs.css';
 const ContactUs = () => {
     return (
-        <Container>
+        <div>
+            <Header />
+            <Container>
             <Row>
                 <Col lg={4}>
                     <div className="contact-info-wrap">
@@ -72,8 +75,9 @@ const ContactUs = () => {
                     </div>
                 </Col>
             </Row>
-            <Footer />
         </Container>
+        <Footer />
+        </div>
     );
 };
 

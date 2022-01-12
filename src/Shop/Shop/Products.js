@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Footer from '../../components/Home/Footer/Footer';
+import Header from '../../components/Home/Header/Header';
 import Product from './Product/Product';
 
 const Products = () => {
@@ -11,7 +12,9 @@ const Products = () => {
         .then(data => setProduct(data))
     },[])
     return (
-        <Container>
+        <div>
+            <Header />
+            <Container>
             <Row xs={1} md={4} className="g-4">
                 {
                     product.map(p => <Product key={p._id}
@@ -19,8 +22,9 @@ const Products = () => {
                     ></Product>)
                 }
             </Row>
-            <Footer />
         </Container>
+        <Footer />
+        </div>
     );
 };
 

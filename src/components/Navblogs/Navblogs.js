@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Blogs.css'
+import Footer from '../Home/Footer/Footer';
+import Header from '../Home/Header/Header';
+import './Navblog.css'
 
-const Blogs = () => {
+const Navblogs = () => {
          return (
                   
                   <div>
+                           <Header />
                            <div className="container my-5">
                            <h2 className="blog-titel text-center my-5">OUR BLOG</h2>
                            <div className="d-flex justify-content-center align-items-center row">
@@ -34,9 +37,10 @@ const Blogs = () => {
                            </div>
                            </div>
                   </div>
+                  <Footer />
                   </div>
          );
 
 };
 
-export default Blogs;
+export default Navblogs;

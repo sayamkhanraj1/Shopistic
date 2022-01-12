@@ -1,7 +1,6 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
-import './DailyDeal.css'
 
 const Product = (props) => {
 

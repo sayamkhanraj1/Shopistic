@@ -6,7 +6,7 @@ const DisplayReview = () => {
          const [reviews, setReviews] = useState([]);
 
          useEffect(()=>{
-                  fetch('https://calm-mountain-67432.herokuapp.com/reviews')
+                  fetch('https://murmuring-anchorage-32548.herokuapp.com/reviews')
                   .then(res => res.json())
                   .then(data => setReviews(data))
          },[])
@@ -14,7 +14,7 @@ const DisplayReview = () => {
                   <div>
                   <div className="container my-5">
                   <div className="proucts-text">
-                  <h2 className="text-center fw-bold products-text mb-5">Reviews</h2>
+                  <h2 className="blog-titel text-center my-5">Reviews</h2>
                   </div>
                   <div className="row">
                   {

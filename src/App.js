@@ -2,8 +2,6 @@ import './App.css';
 import { Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
-import Blogs from './components/Home/Blogs/Blogs';
-import Header from './components/Home/Header/Header';
 import Blog1 from './components/Home/Blog/Blog1/Blog1';
 import Blog2 from './components/Home/Blog/Blog2/Blog2';
 import Blog3 from './components/Home/Blog/Blog3/Blog3';
@@ -21,24 +19,25 @@ import AllOrders from './components/DashBord/AllOrders/AllOrders';
 import Payment from './components/DashBord/Payment/Payment';
 import Review from './components/DashBord/Review/Review';
 import ManegeAllProducts from './components/DashBord/ManegeAllOrders/ManegeAllProducts';
+import PrivateRoute from './components/LoginRegister/PrivateRoute/PrivateRoute'
+import Navblogs from './components/Navblogs/Navblogs';
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="blog1" element={<Blog1 />} />
-        <Route path="blog2" element={<Blog2 />} />
-        <Route path="blog3" element={<Blog3 />} />  
+        <Route path="/blogs" element={<Navblogs />} />
+        <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/blog2" element={<Blog2 />} />
+        <Route path="/blog3" element={<Blog3 />} />  
         <Route path="/login" element={<LoginRegister />} />
         <Route path="/contactus" element={<ContactUs />} />
         {/* <Route path="/checkout" element={<CheckOut />} /> */}
-        <Route path="/moreproduct" element={<Products />} />
-        <Route path="/moreproduct/:id" element={<SingleProduct/>} />
-        <Route path="/dashbord" element={<DashBord/>}> 
+        <Route path="/moreproduct" element={<PrivateRoute><Products /></PrivateRoute>} />
+        <Route path="/moreproduct/:id" element={<PrivateRoute><SingleProduct/></PrivateRoute>} />
+        <Route path="/dashbord" element={<PrivateRoute><DashBord/></PrivateRoute>}> 
 
         <Route exact path={'/dashbord'} element={<MyOrder />} />
               
