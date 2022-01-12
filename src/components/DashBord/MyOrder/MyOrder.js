@@ -66,7 +66,7 @@ const MyOrder = () => {
                                         <td>
                                             <div className="d-flex">
                                                 <button onClick={() => handleDelete(orders?._id)} className="btn btn-danger"><i className="far fa-trash-alt"></i></button>
-                                                <span>{orders.payment ? 'Paid' : <Link to={`/dashbord/pay/${orders?._id}`} style={{ textDecoration: 'none', color: 'black' }}>Pay</Link>}</span>
+                                                <span>{orders.payment ? 'Paid' : <Link to={'/dashbord/pay'} style={{ textDecoration: 'none', color: 'black' }}>Pay</Link>}</span>
                                             </div>
                                         </td>
                                     </tr>

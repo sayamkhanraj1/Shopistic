@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Link, NavLink, Outlet, Routes } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 const drawerWidth = 240;
 

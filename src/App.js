@@ -9,7 +9,7 @@ import Blog2 from './components/Home/Blog/Blog2/Blog2';
 import Blog3 from './components/Home/Blog/Blog3/Blog3';
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import ContactUs from './components/ContactUs/ContactUs';
-import CheckOut from './components/DashBord/Payment/Checkout/Checkout';
+// import CheckOutForm from './components/DashBord/Payment/CheckOutForm/CheckOutForm';
 import Products from './Shop/Shop/Products'
 import SingleProduct from './Shop/Shop/SingleProduct/SingleProduct';
 import Error from './components/Error/Error';
@@ -18,7 +18,6 @@ import AddProduct from './components/DashBord/AddProduct/AddProduct';
 import MakeAdmin from './components/DashBord/MakeAdmin/MakeAdmin';
 import MyOrder from './components/DashBord/MyOrder/MyOrder';
 import AllOrders from './components/DashBord/AllOrders/AllOrders';
-
 import Payment from './components/DashBord/Payment/Payment';
 import Review from './components/DashBord/Review/Review';
 import ManegeAllProducts from './components/DashBord/ManegeAllOrders/ManegeAllProducts';
@@ -36,7 +35,7 @@ function App() {
         <Route path="blog3" element={<Blog3 />} />  
         <Route path="/login" element={<LoginRegister />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/checkout" element={<CheckOut />} />
+        {/* <Route path="/checkout" element={<CheckOut />} /> */}
         <Route path="/moreproduct" element={<Products />} />
         <Route path="/moreproduct/:id" element={<SingleProduct/>} />
         <Route path="/dashbord" element={<DashBord/>}> 
@@ -53,7 +52,7 @@ function App() {
                      
               <Route path={`/dashbord/review`} element={ <Review /> } />
    
-          <Route path={`/dashbord/pay:orderId`} element={<Payment />} />
+          <Route path={`/dashbord/pay`} element={<Payment />} />
         </Route>
         <Route path="*" element={<Error/>} />
       </Routes>
